@@ -3,6 +3,17 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root .page.theme_dark {
+  --accent-color: #ff0070;
+  --after-accent--text-color: #000028;
+  --title-color: #DB00FF;
+  --text-color: #F1B2CE;
+  --background-image: url(../images/cover-image-dark.png);
+
+  --button-text-color: #FF0070;;
+  --button-border-color: #FF0070;;
+  --button-border-extra-color: rgba(255, 0, 112, 0.40);
+}
 
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.

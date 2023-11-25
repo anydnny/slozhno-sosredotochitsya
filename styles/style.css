@@ -3,3 +3,196 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+
+.header {
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr min-content 1fr;
+  min-block-size: 648px;
+  height: 100vh;
+  padding: 20px;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.header-decorated::after {
+  position: absolute;
+  top: 20px;
+  right: 48px;
+  content: "REC";
+  color: var(--accent-color);
+  text-align: center;
+  font-family: var(--font-name), sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.header-decorated::before {
+  content: "";
+  text-align: center;
+  position: absolute;
+  top: 28px;
+  right: 29px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  filter: drop-shadow(0px 0px 4px var(--accent-color));
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+
+.header__theme-menu-button {
+  color: var(--button-text-color);
+  text-align: center;
+  font-family: var(--font-name), sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  block-size: 26px;
+  text-transform: lowercase;
+  padding: 0 13px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: none;
+  border: 1px solid var(--button-border-extra-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--button-border-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-border-color);
+  pointer-events: none;
+  cursor: default;
+}
+
+.header__title {
+  position: relative;
+  left: 20px;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-family: var(--font-name), sans-serif;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+}
+
+.header__description {
+  display: inline-block;
+  inline-size: 50%;
+  min-block-size: 70px;
+  align-self: center;
+  justify-self: end;
+  color: var(--after-accent--text-color);
+  font-family: var(--font-name), sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+@media screen and (768px <= width < 1024px) {
+
+  .header__theme-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .header__title {
+    left: -20px;
+  }
+}
+
+@media screen and (width < 768px) {
+
+  .header {
+    padding: 10px;
+  }
+
+  .header__theme-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+.header__theme-menu-list {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .decorated-zone::before {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .decorated-zone::after {
+    top: 10px;
+    right: 10px;
+  }
+
+  .header-decorated::after {
+    top: 10px;
+    right: 38px;
+  }
+
+  .header-decorated::before {
+    top: 18px;
+    right: 19px;
+  }
+
+  .header__title {
+    left: 0;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header__description {
+    inline-size: 100%;
+  }
+}
