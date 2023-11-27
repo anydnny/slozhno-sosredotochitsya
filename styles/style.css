@@ -5,6 +5,11 @@
   display: flex;
   flex-direction: column;
   min-block-size: 100%;
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .text-link {
@@ -29,10 +34,6 @@
   min-block-size: 648px;
   height: 100vh;
   padding: 20px;
-  background-image: var(--background-image);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   margin-block-end: 60px;
 }
 
@@ -65,10 +66,10 @@
   content: "REC";
   color: var(--accent-color);
   text-align: center;
-  font-family: var(--font-name), sans-serif;
-  font-size: 18px;
+  font-family: var(--font-name);
+  font-size: var(--font-size);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   line-height: 25px;
 }
 
@@ -95,10 +96,10 @@
 .header__theme-menu-button {
   color: var(--button-text-color);
   text-align: center;
-  font-family: var(--font-name), sans-serif;
-  font-size: 18px;
+  font-family: var(--font-name);
+  font-size: var(--font-size);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   block-size: 26px;
   text-transform: lowercase;
   padding: 0 13px;
@@ -128,10 +129,10 @@
   right: 20px;
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  font-family: var(--font-name), sans-serif;
+  font-family: var(--font-name);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 82.5%;
 }
 
@@ -142,10 +143,10 @@
   align-self: center;
   justify-self: end;
   color: var(--after-accent--text-color);
-  font-family: var(--font-name), sans-serif;
-  font-size: 18px;
+  font-family: var(--font-name);
+  font-size: var(--font-size);
   font-style: normal;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 23.4px;
 }
 
@@ -170,15 +171,16 @@
 .main__section-title {
   font-family: var(--font-name);
   color: var(--button-text-color);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 23.4px;
-  font-size: 18px;
+  font-size: var(--font-size);
 }
+
 .main__article-title {
   font-family: var(--font-name);
   color: var(--after-accent--text-color);
-  font-size: 18px;
-  font-weight: 700;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-bold);
   line-height: 23.4px;
   margin-block-end: 10px;
 }
@@ -191,9 +193,9 @@
 
 .main__article-text {
   font-family: var(--font-name);
-  font-size: 18px;
+  font-size: var(--font-size);
   color: var(--text-color);
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   line-height: 23.4px;
 }
 
@@ -210,6 +212,7 @@
 .main__text-section_three-cards .main__section-title {
   width: 30.7%;
 }
+
 .main__text-section_three-cards .main__article-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -220,9 +223,9 @@
 .main__article-subtitle {
   color: var(--after-accent--text-color);
   font-family: var(--font-name);
-  font-size: 18px;
+  font-size: var(--font-size);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   line-height: 23.4px;
   margin-block-end: 10px;
 }
@@ -241,6 +244,7 @@
 .main__gallery-section .main__article-title {
   margin-block-end: 20px;
 }
+
 .gallery__image {
   object-fit: cover;
   width: 100%;
@@ -271,13 +275,14 @@
   height: 98vh;
   padding: 20px;
 }
+
 .footer__title {
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  font-family: var(--font-name), sans-serif;
+  font-family: var(--font-name);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 82.5%;
 }
 
