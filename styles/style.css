@@ -59,6 +59,12 @@
   border-left: 1px solid var(--accent-color);
 }
 
+
+.header-decorated {
+  position: absolute;
+  width: 100%;
+}
+
 .header-decorated::after {
   position: absolute;
   top: 20px;
@@ -66,7 +72,7 @@
   content: "REC";
   color: var(--accent-color);
   text-align: center;
-  font-family: var(--font-name);
+  font-family: var(--font-name), monospace;
   font-size: var(--font-size);
   font-style: normal;
   font-weight: var(--font-weight-normal);
@@ -96,7 +102,7 @@
 .header__theme-menu-button {
   color: var(--button-text-color);
   text-align: center;
-  font-family: var(--font-name);
+  font-family: var(--font-name), monospace;
   font-size: var(--font-size);
   font-style: normal;
   font-weight: var(--font-weight-normal);
@@ -129,7 +135,7 @@
   right: 20px;
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  font-family: var(--font-name);
+  font-family: var(--font-name), monospace;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
   font-weight: var(--font-weight-bold);
@@ -143,7 +149,7 @@
   align-self: center;
   justify-self: end;
   color: var(--after-accent--text-color);
-  font-family: var(--font-name);
+  font-family: var(--font-name), monospace;
   font-size: var(--font-size);
   font-style: normal;
   font-weight: var(--font-weight-bold);
@@ -169,7 +175,7 @@
 }
 
 .main__section-title {
-  font-family: var(--font-name);
+  font-family: var(--font-name), monospace;
   color: var(--button-text-color);
   font-weight: var(--font-weight-bold);
   line-height: 23.4px;
@@ -177,7 +183,7 @@
 }
 
 .main__article-title {
-  font-family: var(--font-name);
+  font-family: var(--font-name), monospace;
   color: var(--after-accent--text-color);
   font-size: var(--font-size);
   font-weight: var(--font-weight-bold);
@@ -192,7 +198,7 @@
 }
 
 .main__article-text {
-  font-family: var(--font-name);
+  font-family: var(--font-name), monospace;
   font-size: var(--font-size);
   color: var(--text-color);
   font-weight: var(--font-weight-normal);
@@ -203,17 +209,17 @@
   margin-block-end: 20px;
 }
 
-.main__text-section_three-cards {
+.main__text-section_multi-cards {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.main__text-section_three-cards .main__section-title {
+.main__text-section_multi-cards .main__section-title {
   width: 30.7%;
 }
 
-.main__text-section_three-cards .main__article-list {
+.main__text-section_multi-cards .main__article-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -222,7 +228,7 @@
 
 .main__article-subtitle {
   color: var(--after-accent--text-color);
-  font-family: var(--font-name);
+  font-family: var(--font-name), monospace;
   font-size: var(--font-size);
   font-style: normal;
   font-weight: var(--font-weight-normal);
@@ -245,25 +251,25 @@
   margin-block-end: 20px;
 }
 
-.gallery__image {
+.main__gallery-image {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.gallery__image_sunset {
+.main__gallery-image_sunset {
   grid-area: sunset;
 }
-.gallery__image_ice {
+.main__gallery-image_ice {
   grid-area: ice;
 }
-.gallery__image_tape {
+.main__gallery-image_tape {
   grid-area: tape;
 }
-.gallery__image_books {
+.main__gallery-image_books {
   grid-area: books;
 }
-.gallery__image_street {
+.main__gallery-image_street {
   grid-area: street;
 }
 
@@ -272,14 +278,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 98vh;
+  min-height: 100vh;
   padding: 20px;
 }
 
 .footer__title {
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  font-family: var(--font-name);
+  font-family: var(--font-name), monospace;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
   font-weight: var(--font-weight-bold);
@@ -301,7 +307,7 @@
     left: -20px;
   }
 
-  .main__text-section_three-cards .main__article-list {
+  .main__text-section_multi-cards .main__article-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -371,17 +377,17 @@
   .main__article-title {
     margin-block-end: 10px;
   }
-  .main__text-section_three-cards {
+  .main__text-section_multi-cards {
     gap: 0;
   }
 
-  .main__text-section_three-cards .main__article-list {
+  .main__text-section_multi-cards .main__article-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
     justify-content: space-between;
   }
-  .main__text-section_three-cards .main__section-title {
+  .main__text-section_multi-cards .main__section-title {
     width: 100%;
   }
   .main__gallery {

@@ -21,3 +21,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+.page.theme_dark .header-decorated {
+  display: block;
+}
