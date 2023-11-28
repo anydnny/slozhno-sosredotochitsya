@@ -168,7 +168,7 @@
 
 .main__text-section {
   display: grid;
-  grid-template-columns: 32.5% minmax(472px, 649px);
+  grid-template-columns: 32.5% 1fr;
   column-gap: 16px;
   justify-content: space-between;
   margin-block-end: 80px;
@@ -307,11 +307,19 @@
     left: -20px;
   }
 
+  .main__text-section {
+    grid-template-columns: 32.6% 1fr;
+  }
+
   .main__text-section_multi-cards .main__article-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
     justify-content: space-between;
+  }
+
+  .main__gallery {
+    grid-template-rows: 25vw 30vw 41vw;
   }
 }
 
